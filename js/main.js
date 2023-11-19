@@ -507,7 +507,54 @@
   return new Lightbox();
 }));
 
+function toggleClock(id_name) {
+  if (id_name=='act') {
+    var myClock = document.getElementById('act');
+    var displaySetting = myClock.style.display;
+    var show_bttn =document.getElementById('img-act');
+    if (displaySetting === 'block')
+     {
+  // clock is visible. hide it
+  myClock.style.display = 'none';
+  show_bttn.style.width= '100%';
+      }
+  else
+   {
+  // clock is hidden. show it
+  myClock.style.display = 'block';
+  show_bttn.style.width = '85%';
+  } 
+  }
+};
 
+function toggleClock2() {
+  var myClock = document.getElementById('video-container5')
+  var myVid1 = document.getElementById('videosall10')
+  myVid1.pause()
+    var displaySetting = myClock.style.display;
+    var show_bttn =document.getElementById('img-vid');
+    if (displaySetting === 'block')
+     {
+  // clock is visible. hide it
+  myClock.style.display = 'none';
+  show_bttn.style.width= '100%';
+      }
+  else
+   {
+  // clock is hidden. show it
+  myClock.style.display = 'block';
+  show_bttn.style.width = '85%';
+  } 
+  
+};
+
+$(document).ready(function(){
+  $(".aims-show-btn").click(function(){
+      $(".for_aims").toggle();
+      $("#points").toggle();
+      $(".aims-show-btn").toggle();
+  });
+});
 
 jQuery(document).ready(function($){
   var slidesWrapper = $('.cd-hero-slider');
